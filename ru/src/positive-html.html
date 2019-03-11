@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>{{ r.name }}</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     {{{styleSheet "positive-html.css"}}}
   </head>
@@ -35,7 +35,7 @@
       -->}}
 
       {{#*inline "icon-skills"}}<span class="fa fa-lg fa-code"></span>{{/inline}}
-      {{> section/skills _icon="icon-skills"}}
+      {{> skills _icon="icon-skills"}}
 
       {{#*inline "icon-employment"}}<span class="fa fa-lg fa-building"></span>{{/inline}}
       {{> employment _icon="icon-employment"}}
@@ -56,7 +56,7 @@
       {{> section/samples _icon="icon-samples"}}
 
       {{#*inline "icon-writing"}}<span class="fa fa-lg fa-pencil"></span>{{/inline}}
-      {{> section/writing _icon="icon-writing"}}
+      {{> writing _icon="icon-writing"}}
 
       {{#*inline "icon-reading"}}<span class="fa fa-lg fa-book"></span>{{/inline}}
       {{> section/reading _icon="icon-reading"}}
@@ -73,13 +73,16 @@
       {{#*inline "icon-testimonials"}}<span class="fa fa-lg fa-quote-left"></span>{{/inline}}
       {{> testimonials _icon="icon-testimonials"}}
 
+      {{#*inline "icon-interests"}}<span class="fa fa-lg fa-paint-brush"></span>{{/inline}}
+      {{> interests _icon="icon-interests"}}
+
       {{#if r.references}}
       {{#section "references"}}
       <section id="references">
         {{#if r.contact.email}}
-        <p><a href="mailto:{{{ r.contact.email }}}">References available on request</a></p>
+        <p><a href="mailto:{{{ r.contact.email }}}">Отзывы доступны по запросу</a></p>
         {{else}}
-        <p>References available on request</p>
+        <p>Отзывы доступны по запросу</p>
         {{/if}}
       </section>
       {{/section}}

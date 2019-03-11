@@ -218,3 +218,7 @@ header > span.fa {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
+#writing span.tenure {
+  display: none;
+}
